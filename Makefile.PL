@@ -4,13 +4,14 @@ use inc::Module::Install;
 
 name 'File-MimeInfo-Simple';
 
-perl_version '5.010';
+perl_version '5.005';
 
 all_from 'lib/File/MimeInfo/Simple.pm';
 
-requires 'Modern::Perl' => '1.03';
-requires 'Capture::Tiny' => '0.06';
-
 license 'MIT';
+
+requires 'File::Slurp' => '0';
+requires 'YAML::Syck' => '0';
+test_requires 'Test::More' => '0';
 
 WriteAll;
